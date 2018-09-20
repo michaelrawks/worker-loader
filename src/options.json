@@ -13,6 +13,9 @@
     "publicPath": {
       "type": "string"
     }
+    "queryParams": {
+      "type": "boolean"
+    }	
   },
   "additionalProperties": false
 }

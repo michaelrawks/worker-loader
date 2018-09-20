@@ -21,7 +21,12 @@ const getWorker = (file, content, options) => {
     )}, ${fallbackWorkerPath})`;
   }
 
-  return `new Worker(${publicWorkerPath})`;
+  let queryParams = '';
+  if (options.queryParams) {
+    /* This is a string to return to the factory method and do interpolation when that factory method is executed. */
+    queryParams = " + `${location.search}`";
+  }
+  return 'new Worker(' + `${publicWorkerPath}` + queryParams + ')';
 };
 
 export default getWorker;
