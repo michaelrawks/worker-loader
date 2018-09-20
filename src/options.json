@@ -12,7 +12,7 @@
     },
     "publicPath": {
       "type": "string"
-    }
+    },
     "queryParams": {
       "type": "boolean"
     }	
